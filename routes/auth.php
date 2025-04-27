@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SocialLoginController;
+use App\Http\Controllers\Auth\SocialLoginController;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\VerifyEmailController;
@@ -59,10 +59,13 @@ Route::middleware('auth')->group(function () {
         ->name('logout');
 });
 
-Route::middleware('guest')->group(function () {
-    Route::get('login/{provider}', [SocialLoginController::class, 'redirect'])
-        ->name('social.login');
-        
-    Route::get('login/{provider}/callback', [SocialLoginController::class, 'handleProviderCallback'])
-        ->name('social.callback');
+
+Route::group(['middleware' => 'guest'], function () {
+    Route::controller(SocialLoginController::class)->group(function () {
+        Route::get('login/{provider}', 'redirectToProvider')
+            ->name('social.login');
+            
+        Route::get('login/{provider}/callback', 'handleProviderCallback')
+            ->name('social.callback');
+    });
 });

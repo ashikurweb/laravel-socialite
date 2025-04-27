@@ -35,22 +35,22 @@
 
             <div class="flex items-center justify-center gap-5 mt-5">
                 <!-- Facebook -->
-                <a href="" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-slate-600 shadow-lg flex items-center justify-center transition duration-300 hover:scale-110 hover:bg-blue-600/20 hover:shadow-blue-500/50">
+                <a href="{{ route('social.login', 'facebook') }}" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-slate-600 shadow-lg flex items-center justify-center transition duration-300 hover:scale-110 hover:bg-blue-600/20 hover:shadow-blue-500/50">
                     <i class="fab fa-facebook-f text-blue-500 text-xl"></i>
                 </a>
 
                 <!-- Google -->
-                <a href="#" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-slate-600 shadow-lg flex items-center justify-center transition duration-300 hover:scale-110 hover:bg-red-500/20 hover:shadow-red-500/50">
+                <a href="{{ route('social.login', 'google') }}" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-slate-600 shadow-lg flex items-center justify-center transition duration-300 hover:scale-110 hover:bg-red-500/20 hover:shadow-red-500/50">
                     <i class="fab fa-google text-red-500 text-xl"></i>
                 </a>
 
                 <!-- LinkedIn -->
-                <a href="#" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-slate-600 shadow-lg flex items-center justify-center transition duration-300 hover:scale-110 hover:bg-blue-800/20 hover:shadow-blue-800/50">
-                    <i class="fab fa-twitter text-blue-800 text-xl"></i>
+                <a href="{{ route('social.login', 'linkedin') }}" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-slate-600 shadow-lg flex items-center justify-center transition duration-300 hover:scale-110 hover:bg-blue-800/20 hover:shadow-blue-800/50">
+                    <i class="fab fa-linkedin text-blue-800 text-xl"></i>
                 </a>
 
                 <!-- GitHub -->
-                <a href="#" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-slate-600 shadow-lg flex items-center justify-center transition duration-300 hover:scale-110 hover:bg-black/20 hover:shadow-black/50">
+                <a href="{{ route('social.login', 'github') }}" class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-slate-600 shadow-lg flex items-center justify-center transition duration-300 hover:scale-110 hover:bg-black/20 hover:shadow-black/50">
                     <i class="fab fa-github text-gray-200 text-xl"></i>
                 </a>
             </div>
